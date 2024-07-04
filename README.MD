@@ -47,4 +47,10 @@ Backend app providing stripe payment functionality
 
 ### Stripe Client
 
-- in browser-app.js configure the stripe public api key
+- create a env.js file in /public dir and add the following:
+
+`js
+function getStripePublicKey() {
+  return "{stripe_public_key_here}";
+}
+`
