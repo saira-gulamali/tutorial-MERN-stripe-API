@@ -49,8 +49,6 @@ Backend app providing stripe payment functionality
 
 - create a env.js file in /public dir and add the following:
 
-`js
-function getStripePublicKey() {
+`function getStripePublicKey() {
   return "{stripe_public_key_here}";
-}
-`
+}`
