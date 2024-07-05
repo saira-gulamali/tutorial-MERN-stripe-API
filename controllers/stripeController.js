@@ -1,7 +1,7 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_API_KEY);
 
 const stripeController = async (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   const { purchase, total_amount, shipping_fee } = req.body;
 
   const calculateOrderAmount = () => {
@@ -15,7 +15,7 @@ const stripeController = async (req, res) => {
     amount: total,
     currency: "gbp",
   });
-  console.log(paymentIntent);
+  // console.log(paymentIntent);
 
   res.json({ total, clientSecret: paymentIntent.client_secret });
 };

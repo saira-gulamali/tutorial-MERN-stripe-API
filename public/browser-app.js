@@ -21,12 +21,12 @@ fetch("/stripe", {
   body: JSON.stringify({ purchase, total_amount, shipping_fee }),
 })
   .then(function (result) {
-    console.log(result);
+    // console.log(result);
 
     return result.json();
   })
   .then(function (data) {
-    console.log(data);
+    // console.log(data);
     if (data.msg) {
       document.querySelector("#total-heading").textContent = `${data.msg}`;
       return;
@@ -136,8 +136,3 @@ var loading = function (isLoading) {
     document.querySelector("#button-text").classList.remove("hidden");
   }
 };
-
-console.log(result);
-// document.querySelector("#total-heading").textContent = `Total is: £${
-// total / 100
-// }`;
